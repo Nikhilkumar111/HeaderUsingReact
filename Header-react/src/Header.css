@@ -1,0 +1,65 @@
+/* Header.css */
+.header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between; /* Space out the three sections: left, center, right */
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px 20px; /* Add some padding around the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: fixed; /* Fix the header to the top */
+    width: 100%; /* Full width across the page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header is above other elements */
+}
+
+.left img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 20px; /* Space between logo and search bar */
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Take up available space */
+    max-width: 600px; /* Set a max width for the search section */
+}
+
+.input {
+    width: 100%; /* Input should take full width of the center section */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Space between input and submit button */
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff5722; /* Vibrant button color */
+    color: green;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: yellow; /* Darker color on hover */
+}
+
+.right img {
+    height: 50px; /* Adjust user icon size */
+    margin-right: 30px; /* Space between search bar and user icon */
+}
+
+@media (max-width: 768px) {
+    .center {
+        max-width: 100%; /* On smaller screens, allow the search bar to grow */
+    }
+
+    .input {
+        width: auto; /* Ensure input resizes on small screens */
+        flex-grow: 1;
+    }
+}
